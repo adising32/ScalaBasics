@@ -1,0 +1,94 @@
+** Scala notes **
+
+//Youtube
+
+Day-1
+
+1. Statically typed : Means variables can store only one specific type of data. Unlike other languages we dont need to specify the type of the variable in Scala as it uses type inferrence to determine the type. But it still is statically typed.
+
+2. Runs on JVM
+
+3. Data types : Boolean, Byte, Short, Char, Int, Long, Float, Double, String _____ (advanced) Unit, Null, Nothing, Any, Anyref (Case sensitive)
+
+4. Semicolon and newline both can be used as a delimeter
+
+5. Lazy initialization of variables can be done if reuired which allocates memory for the variables only when they are being used
+
+Commands : 
+  i.   sbt -> does some downloads
+  ii.  sbt console -> opens programming console
+  iii. var a : Int = 12     -> 'var' means mutable variable, 'a' variable name, 'Int' is datatype, '12' is value.
+  iv.  val a : Int = 12     -> 'val' means immutable variable, rest is same
+  v.   var a = true         -> datatype is inferred based on initialization value.
+  vi.  var x = {val a =12; val b=12; a+b}     -> initialized a and b and return value is a+b which is assigned to x
+  vii. lazy var x = 500     -> variable is not allocated any memory unless used elsewhere.
+
+
+Day-2
+
+1. Scala Object keyword : object <classname> -> creates a singleton class and instantiates an object.
+
+2. String interpolation : 3 types
+      i.   s-type -> println(s"$name is $age years old") -> variables can directly be accessed using $
+      ii.  f-type -> println(f"$name%s is $age%d years old") ->type safety is added
+      iii. raw-type -> println(raw"$name is $age \n years old") -> prints all escape characters present inside double quotes
+
+3. For loop -> see code
+
+Day-3
+
+1. Match expressions (Switch case)
+
+Day-4
+
+1. Operators in scala are actually functions
+
+2. Functions can have default value params
+
+3. Functions can have any symbol as name
+
+4. Higher order functions are functions that take functions as input and can return a function as output
+
+5. Partially applied functions apply the functions to some arguments and the rest are left as wildcards
+
+//Closures
+6. Functions that uses one or more variable which are declared outside the function. Pure closures are ones which use constants declared outside(val) and impure are those which use variables(var) as they can change the value of that variable.
+
+7.Skip Function Currying for now.. as it seems confusing and the use case is unclear
+
+8. Arrays in scala take default values if values are not assigned
+
+9.Lists are immutable. Lists represent linked list
+
+10. Sets are mutable as well as immutable based on the declaration
+
+11. Tuples are immutable
+
+12. Every element in a map is tuple
+
+13. Options : Some or None -> Not seeing it in detail
+
+14. Map applies a function to each element in a collection. Filter selects elements based on some condition. Flattten flattens the output from tuple. FlatMap first maps then flattens
+
+15. Reduce takes a binary function and applies it to the elements
+
+Day-5
+
+1. Fold is similar to reduce but it takes an initial argument
+
+2.Classes can have different param declarations - 
+   i.  val means setter for that param is not available
+   ii. private keyword makes sure param cannot be used outside the class
+   ii. no keyword before param will make sure no getter or setter is available
+
+Day-6
+
+1. Auxilary constructor -> Constructor overloading. 
+                        -> Must call any previously defined constructor. 
+                        -> must have different signatures
+
+2. Inheritence and Abstract class all are similar to JAVA
+
+3. Did not understand Lazy eval completely
+
+4. Traits are like interfaces but can have implementated methods as well. Also for a class to be a trait it needs to have atleast one abstarct method.

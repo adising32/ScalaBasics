@@ -1,0 +1,13 @@
+
+
+#Read line and split with spaces
+val input = scala.io.StdIn.readLine().split("\\s+");
+
+#Pring class/type
+println(input(0).getClass())
+
+#Change string array to int array
+var data = input.map(x => x.toInt)
+
+
+
